@@ -7,7 +7,7 @@ class GildedRose {
         this.items = items;
     }
 
-    public void updateQuality() {
+    public void updateByDay() {
         for (Item item : items) {
             item.update();
         }

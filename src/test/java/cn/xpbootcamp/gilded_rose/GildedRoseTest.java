@@ -1,5 +1,9 @@
 package cn.xpbootcamp.gilded_rose;
 
+import cn.xpbootcamp.gilded_rose.Items.AgedBrie;
+import cn.xpbootcamp.gilded_rose.Items.BackstagePass;
+import cn.xpbootcamp.gilded_rose.Items.RegularItem;
+import cn.xpbootcamp.gilded_rose.Items.Sulfuras;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -15,7 +19,7 @@ class GildedRoseTest {
     void should_update_item_correctly(TestFixture testFixture) {
         Item item = createItem(testFixture.name, testFixture.sellIn, testFixture.quality);
 
-        new GildedRose(new Item[]{item}).updateQuality();
+        new GildedRose(new Item[]{item}).updateByDay();
 
         Item expectedItem = createItem(testFixture.name, testFixture.updatedSellIn, testFixture.updatedQuality);
         assertThat(item.toString()).isEqualTo(expectedItem.toString());

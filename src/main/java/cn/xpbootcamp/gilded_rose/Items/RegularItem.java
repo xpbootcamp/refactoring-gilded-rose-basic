@@ -9,9 +9,7 @@ public class RegularItem extends Item {
 
     @Override
     protected void updateQualityAfterExpired() {
-        if (quality > 0) {
-            quality = quality - 1;
-        }
+        decreaseQuality();
     }
 
     @Override
@@ -21,8 +19,7 @@ public class RegularItem extends Item {
 
     @Override
     protected void updateQuality() {
-        if (quality > 0) {
-            quality = quality - 1;
-        }
+        decreaseQuality();
     }
+
 }
