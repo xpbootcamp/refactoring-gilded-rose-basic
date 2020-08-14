@@ -67,6 +67,9 @@ class GildedRoseTest {
     }
 
     private static Item createItem(String name, int sellIn, int quality) {
+        if (name.equals("Aged Brie")) {
+            return new AgedBrie(sellIn, quality);
+        }
         return new Item(name, sellIn, quality);
     }
 
