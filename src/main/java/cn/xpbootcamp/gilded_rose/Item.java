@@ -29,32 +29,19 @@ public class Item {
     }
 
     protected void updateQualityAfterExpired() {
-        if (isSulfuras()) {
-            return;
-        }
         if (quality > 0) {
             quality = quality - 1;
         }
     }
 
     protected void updateSellIn() {
-        if (isSulfuras()) {
-            return;
-        }
         sellIn = sellIn - 1;
     }
 
     protected void updateQuality() {
-        if (isSulfuras()) {
-            return;
-        }
         if (quality > 0) {
             quality = quality - 1;
         }
-    }
-
-    private boolean isSulfuras() {
-        return name.equals("Sulfuras, Hand of Ragnaros");
     }
 
 }
