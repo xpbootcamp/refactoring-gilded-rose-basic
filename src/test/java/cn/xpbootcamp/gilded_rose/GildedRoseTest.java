@@ -70,6 +70,9 @@ class GildedRoseTest {
         if (name.equals("Aged Brie")) {
             return new AgedBrie(sellIn, quality);
         }
+        if (name.equals("Backstage passes to a TAFKAL80ETC concert")) {
+            return new BackstagePass(sellIn, quality);
+        }
         return new Item(name, sellIn, quality);
     }
 
