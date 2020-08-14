@@ -76,7 +76,7 @@ class GildedRoseTest {
         if (name.equals("Sulfuras, Hand of Ragnaros")) {
             return new Sulfuras(sellIn, quality);
         }
-        return new Item(name, sellIn, quality);
+        return new RegularItem(sellIn, quality);
     }
 
     private static class TestFixture {

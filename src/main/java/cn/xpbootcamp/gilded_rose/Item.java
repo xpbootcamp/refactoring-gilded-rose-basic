@@ -1,6 +1,6 @@
 package cn.xpbootcamp.gilded_rose;
 
-public class Item {
+public abstract class Item {
 
     public String name;
 
@@ -28,20 +28,10 @@ public class Item {
         }
     }
 
-    protected void updateQualityAfterExpired() {
-        if (quality > 0) {
-            quality = quality - 1;
-        }
-    }
+    protected abstract void updateQualityAfterExpired();
 
-    protected void updateSellIn() {
-        sellIn = sellIn - 1;
-    }
+    protected abstract void updateSellIn();
 
-    protected void updateQuality() {
-        if (quality > 0) {
-            quality = quality - 1;
-        }
-    }
+    protected abstract void updateQuality();
 
 }
